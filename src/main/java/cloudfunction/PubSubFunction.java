@@ -52,7 +52,7 @@ public class PubSubFunction implements CloudEventsFunction {
 
         //generate VerificationLink
         Instant expirationTime = Instant.now().plus(Duration.ofMinutes(2));
-        String verificationLink = "http://divyashree.me:8080/verify?token=" + verificationToken
+        String verificationLink = "https://divyashree.me/verify?token=" + verificationToken
                 + "&expires=" + expirationTime.toEpochMilli();
 
         String emailBody = "Click on the link to verify your email: " + verificationLink;
